@@ -29,7 +29,7 @@ pipeline {
        
        
        
-         stages {
+        
      stage('Copy Archive') {
          steps {
              script {
@@ -40,11 +40,6 @@ pipeline {
              }
          }
      }
-    }
-    }
-        
     
-    
-  
-   
-}
+   }
+   }
