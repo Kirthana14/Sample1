@@ -26,6 +26,21 @@ pipeline {
                
             }
         }
+       
+       
+       
+         stages {
+     stage('Copy Archive') {
+         steps {
+             script {
+                 step ([$class: 'CopyArtifact',
+                 projectName: 'Sample-project',
+                 filter: "build/libs/*.jar",
+                 target: 'var/www']);
+             }
+         }
+     }
+    }
     }
         
     
